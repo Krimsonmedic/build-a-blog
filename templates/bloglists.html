@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if bloglist|length == 0 %}
+    <p>No posts yet</p>
+
+    {% else %}
+    {% for x in bloglist %}
+    <Ul>
+       <li> <a href="/posts?id={{x.id}}">{{ x.title }}</a></li></a>
+    </Ul>
+    {% endfor %}
+    {% endif %}
+
+{% endblock %}
